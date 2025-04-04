@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="075acf79-1985-45b5-bb0d-87ce07633612" name="Changes" comment="Add package com.testautmation.apiesting.tests and package com.testautomation.apitesting.utils;">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/testautmation/apiesting/tests/PostAPIRequestUsingFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/testautomation/apitesting/utils/FileNameConstans.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/postapirequestbody.txt" afterDir="false" />
+    <list default="true" id="075acf79-1985-45b5-bb0d-87ce07633612" name="Changes" comment="Create FileNameConstans, PostAPIRequestUsingFile classes and postapirequestbody.txt">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/testautmation/apiesting/tests/Booking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/testautmation/apiesting/tests/BookingDates.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/testautmation/apiesting/tests/PostAPIRequestUsingClasses.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/expectedjsonschema.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/testautomation/apitesting/utils/FileNameConstans.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/testautomation/apitesting/utils/FileNameConstans.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +65,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "TestNG.GetAPIRequest.executor": "Run",
+    "TestNG.PostAPIRequestUsingClasses.executor": "Run",
+    "TestNG.PostAPIRequestUsingClasses.postAPPIRequest.executor": "Run",
     "TestNG.PostAPIRequestUsingFile.executor": "Run",
     "TestNG.PostAPIRequestUsingFile.postAPIRequest.executor": "Run",
     "git-widget-placeholder": "master",
@@ -79,7 +83,42 @@
       <recent name="K:\JAVAProjects\RESTAssuredAPI\src\test\java\com\testautmation\apiesting\tests" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.PostAPIRequestUsingFile.postAPIRequest">
+  <component name="RunManager" selected="TestNG.PostAPIRequestUsingClasses.postAPPIRequest">
+    <configuration name="PostAPIRequestUsingClasses" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RESTAssuredAPITesting" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.testautmation.apiesting.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.testautmation.apiesting.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.testautmation.apiesting.tests.PostAPIRequestUsingClasses" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PostAPIRequestUsingClasses.postAPPIRequest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RESTAssuredAPITesting" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.testautmation.apiesting.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.testautmation.apiesting.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.testautmation.apiesting.tests.PostAPIRequestUsingClasses" />
+      <option name="METHOD_NAME" value="postAPPIRequest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PostAPIRequestUsingFile" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RESTAssuredAPITesting" />
       <extension name="coverage">
@@ -117,6 +156,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.PostAPIRequestUsingClasses.postAPPIRequest" />
+        <item itemvalue="TestNG.PostAPIRequestUsingClasses" />
         <item itemvalue="TestNG.PostAPIRequestUsingFile.postAPIRequest" />
         <item itemvalue="TestNG.PostAPIRequestUsingFile" />
       </list>
@@ -147,7 +188,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743690237975</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Create FileNameConstans, PostAPIRequestUsingFile classes and postapirequestbody.txt">
+      <option name="closed" value="true" />
+      <created>1743697324009</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1743697324009</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -164,6 +213,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="RESTAssured project" />
     <MESSAGE value="Add package com.testautmation.apiesting.tests and package com.testautomation.apitesting.utils;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add package com.testautmation.apiesting.tests and package com.testautomation.apitesting.utils;" />
+    <MESSAGE value="Create FileNameConstans, PostAPIRequestUsingFile classes and postapirequestbody.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create FileNameConstans, PostAPIRequestUsingFile classes and postapirequestbody.txt" />
   </component>
 </project>
