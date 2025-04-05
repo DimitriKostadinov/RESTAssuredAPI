@@ -1,6 +1,7 @@
 package com.testautmation.apiesting.tests;
 
 import com.jayway.jsonpath.JsonPath;
+import com.testautomation.apitesting.listener.RestAssuredListener;
 import com.testautomation.apitesting.utils.BaseTest;
 import com.testautomation.apitesting.utils.FileNameConstans;
 import io.restassured.RestAssured;
@@ -14,10 +15,17 @@ import org.testng.annotations.Test;
 
 import java.io.File;
 import java.io.IOException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class EndToEndAPITest extends BaseTest {
+
+    private static final Logger logger = LogManager.getLogger(EndToEndAPITest.class);
+
     @Test
     public void testEndToEnd(){
+
+        logger.info("testEndToEnd test execution started !");
 
         try {
             String postAPIRequestBody = FileUtils.readFileToString(new File(FileNameConstans.POST_API_REQUEST_BODY),"UTF-8");
@@ -29,7 +37,7 @@ public class EndToEndAPITest extends BaseTest {
             String patchAPIRequestBody = FileUtils.readFileToString(new File(FileNameConstans.PATCH_API_REQUEST_BODY),"UTF-8");
 
             Response response = RestAssured
-                .given()
+                .given().filter(new RestAssuredListener())
                     .contentType(ContentType.JSON)
                     .body(postAPIRequestBody)
                     .baseUri("https://restful-booker.herokuapp.com/booking")
@@ -52,7 +60,7 @@ public class EndToEndAPITest extends BaseTest {
 
             // Get API call (Get request)
             RestAssured
-                .given()
+                .given().filter(new RestAssuredListener())
                     .contentType(ContentType.JSON)
                     .baseUri("https://restful-booker.herokuapp.com/booking")
                 .when()
@@ -64,7 +72,7 @@ public class EndToEndAPITest extends BaseTest {
             // token generation
             Response tokenAPIResponse =
                     RestAssured
-                        .given()
+                        .given().filter(new RestAssuredListener())
                             .contentType(ContentType.JSON)
                             .body(tokenAPIRequestBody)
                             .baseUri("https://restful-booker.herokuapp.com/auth")
@@ -82,7 +90,7 @@ public class EndToEndAPITest extends BaseTest {
 
             // put API call (Update request full record update)
             RestAssured
-                .given()
+                .given().filter(new RestAssuredListener())
                     .contentType(ContentType.JSON)
                     .body(putAPIRequestBody)
                     .header("Cookie","token="+token)
@@ -99,7 +107,7 @@ public class EndToEndAPITest extends BaseTest {
 
             // patch api call (Update request partial record update)
             RestAssured
-                .given()
+                .given().filter(new RestAssuredListener())
                     .contentType(ContentType.JSON)
                     .body(patchAPIRequestBody)
                     .header("Cookie","token="+token)
@@ -117,7 +125,7 @@ public class EndToEndAPITest extends BaseTest {
 
             System.out.println("DELETE API - The token and bookingId are " + token + " " + bookingId);
             RestAssured
-                .given()
+                .given().filter(new RestAssuredListener())
                     .contentType(ContentType.JSON)
                     .header("Cookie","token="+token)
                     .baseUri("https://restful-booker.herokuapp.com/booking/")
@@ -130,5 +138,6 @@ public class EndToEndAPITest extends BaseTest {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        logger.info("testEndToEnd test execution ended !");
     }
 }

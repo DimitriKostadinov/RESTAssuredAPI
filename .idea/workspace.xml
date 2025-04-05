@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="075acf79-1985-45b5-bb0d-87ce07633612" name="Changes" comment="Create Booking, BookingDates, PostAPIRequestUsingClasses classes and create expectedjsonschema.txt">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/testautmation/apiesting/tests/EndToEndAPITest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/testautmation/apiesting/tests/PatchAPIRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/testautmation/apiesting/tests/PutAPIRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/patchapirequestbody.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/putapirequestbody.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/tokenapirequestbody.txt" afterDir="false" />
+    <list default="true" id="075acf79-1985-45b5-bb0d-87ce07633612" name="Changes" comment="Create PutAPIRequest, PatchAPIRequest, EndToEndAPITest classes and tokenapirequestbody.txt, putapirequestbody.txt,&#10;patchapirequestbody.txt">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/testautomation/apitesting/listener/RestAssuredListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/log4j2.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/testautomation/apitesting/utils/FileNameConstans.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/testautomation/apitesting/utils/FileNameConstans.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/testautmation/apiesting/tests/EndToEndAPITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/testautmation/apiesting/tests/EndToEndAPITest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/testautomation/apitesting/utils/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/testautomation/apitesting/utils/BaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +226,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743782457208</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Create PutAPIRequest, PatchAPIRequest, EndToEndAPITest classes and tokenapirequestbody.txt, putapirequestbody.txt,&#10;patchapirequestbody.txt">
+      <option name="closed" value="true" />
+      <created>1743857045047</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1743857045047</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -248,6 +253,7 @@
     <MESSAGE value="Add package com.testautmation.apiesting.tests and package com.testautomation.apitesting.utils;" />
     <MESSAGE value="Create FileNameConstans, PostAPIRequestUsingFile classes and postapirequestbody.txt" />
     <MESSAGE value="Create Booking, BookingDates, PostAPIRequestUsingClasses classes and create expectedjsonschema.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create Booking, BookingDates, PostAPIRequestUsingClasses classes and create expectedjsonschema.txt" />
+    <MESSAGE value="Create PutAPIRequest, PatchAPIRequest, EndToEndAPITest classes and tokenapirequestbody.txt, putapirequestbody.txt,&#10;patchapirequestbody.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create PutAPIRequest, PatchAPIRequest, EndToEndAPITest classes and tokenapirequestbody.txt, putapirequestbody.txt,&#10;patchapirequestbody.txt" />
   </component>
 </project>
