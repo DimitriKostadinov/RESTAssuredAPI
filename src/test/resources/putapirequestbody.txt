@@ -1,0 +1,11 @@
+{
+    "firstname": "Dimitri",
+    "lastname": "Kostadinov",
+    "totalprice": 111,
+    "depositpaid": true,
+    "bookingdates": {
+        "checkin": "2025-03-12",
+        "checkout": "2025-03-20"
+    },
+    "additionalneeds": "Eran hotel"
+}
