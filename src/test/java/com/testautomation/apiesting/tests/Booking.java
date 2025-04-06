@@ -1,4 +1,4 @@
-package com.testautmation.apiesting.tests;
+package com.testautomation.apiesting.tests;
 
 public class Booking {
 
@@ -9,15 +9,14 @@ public class Booking {
 
     public Booking (){}
 
-    public Booking(String firstname,String lastname,String additionalneeds,
-                   int totalprice, boolean depositpaid,BookingDates bookingdates)
+    public Booking(String firstname,String lastname,int totalprice,boolean depositpaid,BookingDates bookingdates,String additionalneeds)
     {
         setFirstname(firstname);
         setLastname(lastname);
-        setAdditionalneeds(additionalneeds);
         setTotalprice(totalprice);
         setDepositpaid(depositpaid);
         setBookingdates(bookingdates);
+        setAdditionalneeds(additionalneeds);
     }
 
     public String getFirstname() {

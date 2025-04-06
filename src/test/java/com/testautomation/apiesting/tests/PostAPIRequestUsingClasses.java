@@ -1,4 +1,4 @@
-package com.testautmation.apiesting.tests;
+package com.testautomation.apiesting.tests;
 
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -24,11 +24,10 @@ public class PostAPIRequestUsingClasses {
         try {
             BookingDates bookingDates = new BookingDates("2025-07-12","2025-07-22");
 
-            Booking booking = new Booking("Dimitri","Kostadinov","Lux Hotel",
-                    1300,true,bookingDates);
+            Booking booking = new Booking("Dimitri","Kostadinov",1300,true,bookingDates,"Lux Hotel");
 
+            //serialization
             ObjectMapper objectMapper = new ObjectMapper();
-
             String requestBody = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(booking);
 
             //System.out.println(requestBody);

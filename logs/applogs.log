@@ -31,7 +31,7 @@ Expected status code <200> but was <405>.
 	at io.restassured.specification.ResponseSpecification$statusCode$1.callCurrent(Unknown Source)
 	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
 	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at com.testautmation.apiesting.tests.EndToEndAPITest.testEndToEnd(EndToEndAPITest.java:119)
+	at com.testautomation.apiesting.tests.EndToEndAPITest.testEndToEnd(EndToEndAPITest.java:119)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)

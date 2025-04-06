@@ -1,4 +1,4 @@
-package com.testautmation.apiesting.tests;
+package com.testautomation.apiesting.tests;
 
 import com.jayway.jsonpath.JsonPath;
 import com.testautomation.apitesting.utils.FileNameConstans;

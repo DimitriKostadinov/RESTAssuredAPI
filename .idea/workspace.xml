@@ -4,13 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="075acf79-1985-45b5-bb0d-87ce07633612" name="Changes" comment="Create PutAPIRequest, PatchAPIRequest, EndToEndAPITest classes and tokenapirequestbody.txt, putapirequestbody.txt,&#10;patchapirequestbody.txt">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/testautomation/apitesting/listener/RestAssuredListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/log4j2.properties" afterDir="false" />
+    <list default="true" id="075acf79-1985-45b5-bb0d-87ce07633612" name="Changes" comment="Create RestAssuredListener class and log4j2.properties and applogs.log files">
+      <change afterPath="$PROJECT_DIR$/src/datadriventestingusingjson.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/testautomation/apiesting/tests/DataDrivenTestingUsingCSVFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/testautomation/apiesting/tests/DataDrivenTestingUsingFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/testdata.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/testdatajson.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/applogs.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/applogs.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/testautmation/apiesting/tests/EndToEndAPITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/testautmation/apiesting/tests/EndToEndAPITest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/testautomation/apitesting/utils/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/testautomation/apitesting/utils/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/testautmation/apiesting/tests/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/testautomation/apiesting/tests/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/testautmation/apiesting/tests/BookingDates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/testautomation/apiesting/tests/BookingDates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/testautmation/apiesting/tests/EndToEndAPITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/testautomation/apiesting/tests/EndToEndAPITest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/testautmation/apiesting/tests/GetAPIRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/testautomation/apiesting/tests/GetAPIRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/testautmation/apiesting/tests/PatchAPIRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/testautomation/apiesting/tests/PatchAPIRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/testautmation/apiesting/tests/PostAPIRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/testautomation/apiesting/tests/PostAPIRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/testautmation/apiesting/tests/PostAPIRequestUsingClasses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/testautomation/apiesting/tests/PostAPIRequestUsingClasses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/testautmation/apiesting/tests/PostAPIRequestUsingFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/testautomation/apiesting/tests/PostAPIRequestUsingFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/testautmation/apiesting/tests/PutAPIRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/testautomation/apiesting/tests/PutAPIRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/testautomation/apitesting/utils/FileNameConstans.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/testautomation/apitesting/utils/FileNameConstans.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,8 +76,11 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TestNG.DataDrivenTestingUsingCSVFile.DataDrivenTesting.executor": "Run",
+    "TestNG.DataDrivenTestingUsingFile.DataDrivenTestingUsingJson.executor": "Run",
     "TestNG.EndToEndAPITest.testEndToEnd.executor": "Run",
     "TestNG.GetAPIRequest.executor": "Run",
+    "TestNG.K:/JAVAProjects/RESTAssuredAPI/src/datadriventestingusingjson.xml.executor": "Run",
     "TestNG.PostAPIRequestUsingClasses.executor": "Run",
     "TestNG.PostAPIRequestUsingClasses.postAPPIRequest.executor": "Run",
     "TestNG.PostAPIRequestUsingFile.executor": "Run",
@@ -85,7 +100,43 @@
       <recent name="K:\JAVAProjects\RESTAssuredAPI\src\test\java\com\testautmation\apiesting\tests" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.EndToEndAPITest.testEndToEnd">
+  <component name="RunManager" selected="TestNG.DataDrivenTestingUsingCSVFile.DataDrivenTesting">
+    <configuration name="DataDrivenTestingUsingCSVFile.DataDrivenTesting" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RESTAssuredAPITesting" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.testautomation.apiesting.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.testautomation.apiesting.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.testautomation.apiesting.tests.DataDrivenTestingUsingCSVFile" />
+      <option name="METHOD_NAME" value="DataDrivenTesting" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DataDrivenTestingUsingFile.DataDrivenTestingUsingJson" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RESTAssuredAPITesting" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.testautmation.apiesting.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.testautmation.apiesting.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.testautmation.apiesting.tests.DataDrivenTestingUsingFile" />
+      <option name="METHOD_NAME" value="DataDrivenTestingUsingJson" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EndToEndAPITest.testEndToEnd" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RESTAssuredAPITesting" />
       <extension name="coverage">
@@ -104,17 +155,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PostAPIRequestUsingClasses" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="K:/JAVAProjects/RESTAssuredAPI/src/datadriventestingusingjson.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RESTAssuredAPITesting" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.testautmation.apiesting.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.testautmation.apiesting.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.testautmation.apiesting.tests.PostAPIRequestUsingClasses" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/datadriventestingusingjson.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
       <method v="2">
@@ -139,49 +183,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PostAPIRequestUsingFile.postAPIRequest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="RESTAssuredAPITesting" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.testautmation.apiesting.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.testautmation.apiesting.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.testautmation.apiesting.tests.PostAPIRequestUsingFile" />
-      <option name="METHOD_NAME" value="postAPIRequest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PutAPIRequest.postAPIRequest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="RESTAssuredAPITesting" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.testautmation.apiesting.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.testautmation.apiesting.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.testautmation.apiesting.tests.PutAPIRequest" />
-      <option name="METHOD_NAME" value="postAPIRequest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.EndToEndAPITest.testEndToEnd" />
-        <item itemvalue="TestNG.PutAPIRequest.postAPIRequest" />
+        <item itemvalue="TestNG.DataDrivenTestingUsingCSVFile.DataDrivenTesting" />
+        <item itemvalue="TestNG.DataDrivenTestingUsingFile.DataDrivenTestingUsingJson" />
         <item itemvalue="TestNG.PostAPIRequestUsingClasses.postAPPIRequest" />
-        <item itemvalue="TestNG.PostAPIRequestUsingClasses" />
-        <item itemvalue="TestNG.PostAPIRequestUsingFile.postAPIRequest" />
+        <item itemvalue="TestNG.K:/JAVAProjects/RESTAssuredAPI/src/datadriventestingusingjson.xml" />
+        <item itemvalue="TestNG.EndToEndAPITest.testEndToEnd" />
       </list>
     </recent_temporary>
   </component>
@@ -234,8 +242,19 @@
       <option name="project" value="LOCAL" />
       <updated>1743857045047</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Create RestAssuredListener class and log4j2.properties and applogs.log files">
+      <option name="closed" value="true" />
+      <created>1743865646716</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1743865646716</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -254,6 +273,7 @@
     <MESSAGE value="Create FileNameConstans, PostAPIRequestUsingFile classes and postapirequestbody.txt" />
     <MESSAGE value="Create Booking, BookingDates, PostAPIRequestUsingClasses classes and create expectedjsonschema.txt" />
     <MESSAGE value="Create PutAPIRequest, PatchAPIRequest, EndToEndAPITest classes and tokenapirequestbody.txt, putapirequestbody.txt,&#10;patchapirequestbody.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create PutAPIRequest, PatchAPIRequest, EndToEndAPITest classes and tokenapirequestbody.txt, putapirequestbody.txt,&#10;patchapirequestbody.txt" />
+    <MESSAGE value="Create RestAssuredListener class and log4j2.properties and applogs.log files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create RestAssuredListener class and log4j2.properties and applogs.log files" />
   </component>
 </project>
