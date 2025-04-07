@@ -17,4 +17,6 @@ public class FileNameConstans {
     public static final String JSON_TEST_DATA = BASE_PATH+"testdatajson.json";
 
     public static final String CSV_TEST_DATA = BASE_PATH+"testdata.csv";
+
+    public static final String EXCEL_TEST_DATA = BASE_PATH+"exceltestdata.xlsx";
 }

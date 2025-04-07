@@ -1,4 +1,4 @@
-package com.testautomation.apiesting.tests;
+package com.testautomation.apitesting.tests;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;

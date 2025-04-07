@@ -1,4 +1,4 @@
-package com.testautomation.apiesting.tests;
+package com.testautomation.apitesting.tests;
 
 public class BookingDates {
 

@@ -1,4 +1,4 @@
-package com.testautomation.apiesting.tests;
+package com.testautomation.apitesting.tests;
 
 import com.testautomation.apitesting.utils.BaseTest;
 import io.restassured.RestAssured;

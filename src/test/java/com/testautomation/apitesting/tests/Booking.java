@@ -1,15 +1,15 @@
-package com.testautomation.apiesting.tests;
+package com.testautomation.apitesting.tests;
 
 public class Booking {
 
     private String firstname, lastname, additionalneeds;
-    private int totalprice;
+    private double totalprice;
     private boolean depositpaid;
     private BookingDates bookingdates;
 
     public Booking (){}
 
-    public Booking(String firstname,String lastname,int totalprice,boolean depositpaid,BookingDates bookingdates,String additionalneeds)
+    public Booking(String firstname,String lastname,double totalprice,boolean depositpaid,BookingDates bookingdates,String additionalneeds)
     {
         setFirstname(firstname);
         setLastname(lastname);
@@ -43,11 +43,11 @@ public class Booking {
         this.additionalneeds = additionalneeds;
     }
 
-    public int getTotalprice() {
+    public double getTotalprice() {
         return totalprice;
     }
 
-    public void setTotalprice(int totalprice) {
+    public void setTotalprice(double totalprice) {
         this.totalprice = totalprice;
     }
 

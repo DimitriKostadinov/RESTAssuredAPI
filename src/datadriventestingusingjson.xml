@@ -3,7 +3,7 @@
 <suite name="DataDrivenTestingUsingJson">
     <test name="Test1">
         <classes>
-            <class name="com.testautomation.apiesting.tests.DataDrivenTestingUsingFile">
+            <class name="com.testautomation.apitesting.tests.DataDrivenTestingUsingFile">
                 <methods>
                     <include name="DataDrivenTestingUsingJson"/>
                 </methods>

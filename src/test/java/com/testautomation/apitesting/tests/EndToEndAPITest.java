@@ -1,6 +1,8 @@
-package com.testautomation.apiesting.tests;
+package com.testautomation.apitesting.tests;
 
 import com.jayway.jsonpath.JsonPath;
+import com.testautomation.apitesting.listener.RestAssuredListener;
+import com.testautomation.apitesting.utils.BaseTest;
 import com.testautomation.apitesting.utils.FileNameConstans;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -13,10 +15,17 @@ import org.testng.annotations.Test;
 
 import java.io.File;
 import java.io.IOException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-public class PatchAPIRequest {
+public class EndToEndAPITest extends BaseTest {
+
+    private static final Logger logger = LogManager.getLogger(EndToEndAPITest.class);
+
     @Test
-    public void patchAPIRequest(){
+    public void testEndToEnd(){
+
+        logger.info("testEndToEnd test execution started !");
 
         try {
             String postAPIRequestBody = FileUtils.readFileToString(new File(FileNameConstans.POST_API_REQUEST_BODY),"UTF-8");
@@ -28,7 +37,7 @@ public class PatchAPIRequest {
             String patchAPIRequestBody = FileUtils.readFileToString(new File(FileNameConstans.PATCH_API_REQUEST_BODY),"UTF-8");
 
             Response response = RestAssured
-                .given()
+                .given().filter(new RestAssuredListener())
                     .contentType(ContentType.JSON)
                     .body(postAPIRequestBody)
                     .baseUri("https://restful-booker.herokuapp.com/booking")
@@ -47,9 +56,11 @@ public class PatchAPIRequest {
 
             int bookingId = JsonPath.read(response.body().asString(),"$.bookingid"); // get the id from the post request
 
+            System.out.println("The booking record is created BookingId: " + bookingId);
+
             // Get API call (Get request)
             RestAssured
-                .given()
+                .given().filter(new RestAssuredListener())
                     .contentType(ContentType.JSON)
                     .baseUri("https://restful-booker.herokuapp.com/booking")
                 .when()
@@ -61,7 +72,7 @@ public class PatchAPIRequest {
             // token generation
             Response tokenAPIResponse =
                     RestAssured
-                        .given()
+                        .given().filter(new RestAssuredListener())
                             .contentType(ContentType.JSON)
                             .body(tokenAPIRequestBody)
                             .baseUri("https://restful-booker.herokuapp.com/auth")
@@ -75,9 +86,11 @@ public class PatchAPIRequest {
 
             String token = JsonPath.read(tokenAPIResponse.body().asString(),"$.token");
 
+            System.out.println("The token is : " + token);
+
             // put API call (Update request full record update)
             RestAssured
-                .given()
+                .given().filter(new RestAssuredListener())
                     .contentType(ContentType.JSON)
                     .body(putAPIRequestBody)
                     .header("Cookie","token="+token)
@@ -90,22 +103,41 @@ public class PatchAPIRequest {
                     .body("firstname", Matchers.equalTo("Dimitri"))
                     .body("lastname", Matchers.equalTo("Kostadinov"));
 
+            System.out.println("PUT API - The token and bookingId are " + token + " " + bookingId);
+
             // patch api call (Update request partial record update)
             RestAssured
-                    .given()
-                        .contentType(ContentType.JSON)
-                        .body(patchAPIRequestBody)
-                        .header("Cookie","token="+token)
-                        .baseUri("https://restful-booker.herokuapp.com/booking/")
-                    .when()
-                        .patch("{bookingId}",bookingId)
-                    .then()
-                        .assertThat()
-                        .statusCode(200)
-                        .body("firstname", Matchers.equalTo("Mitko"));
+                .given().filter(new RestAssuredListener())
+                    .contentType(ContentType.JSON)
+                    .body(patchAPIRequestBody)
+                    .header("Cookie","token="+token)
+                    .baseUri("https://restful-booker.herokuapp.com/booking/")
+                .when()
+                    .patch("{bookingId}",bookingId)
+                .then()
+                    .assertThat()
+                    .statusCode(200)
+                    .body("firstname", Matchers.equalTo("Mitko"));
+
+            System.out.println("PATCH API - The token and bookingId are " + token + " " + bookingId);
+
+            // Delete api call (Delete the record)
+
+            System.out.println("DELETE API - The token and bookingId are " + token + " " + bookingId);
+            RestAssured
+                .given().filter(new RestAssuredListener())
+                    .contentType(ContentType.JSON)
+                    .header("Cookie","token="+token)
+                    .baseUri("https://restful-booker.herokuapp.com/booking/")
+                .when()
+                    .delete("{bookingId}",bookingId)
+                .then()
+                    .assertThat()
+                    .statusCode(201);
 
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        logger.info("testEndToEnd test execution ended !");
     }
 }

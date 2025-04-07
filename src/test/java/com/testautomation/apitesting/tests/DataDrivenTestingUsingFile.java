@@ -1,4 +1,4 @@
-package com.testautomation.apiesting.tests;
+package com.testautomation.apitesting.tests;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
